@@ -1,0 +1,56 @@
+Public Class Item
+    ' The following are the properties of the item class
+    Private ItemName As String
+    Private ItemPrice As Double
+    Private Description As String
+    Private Category As String
+    Private ItemQuantity As Integer
+
+    Sub New(name As String, price As Double, about As String, categ As String)
+        ItemName = name
+        ItemPrice = price
+        Description = about
+        Category = categ
+    End Sub
+
+    Sub setName(name As String)
+        ItemName = name
+    End Sub
+
+    Sub setPrice(price As Double)
+        ItemPrice = price
+    End Sub
+    
+    Sub setDescription(about As String)
+        Description = about
+    End Sub
+
+    Sub setCategory(categ As String)
+        Category = categ
+    End Sub
+    
+    Sub setQuantity(quantity as Integer)
+        ItemQuantity = quantity
+    End Sub
+    
+    Function getQuantity() As Integer
+        Return ItemQuantiy
+    End Function
+
+    Function getName() As String
+        Return ItemName
+    End Function
+
+    Function getPrice() As Double
+        Return ItemPrice
+    End Function
+
+    Function getDescription() As String
+        Return Description
+    End Function
+
+    Function getCategory() As String
+        Return Category
+    End Function
+
+End Class

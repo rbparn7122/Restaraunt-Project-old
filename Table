@@ -1,0 +1,35 @@
+Public Class Table
+
+    'Variables
+    Private TableName As String
+    Private TableLocation As String
+    Private BillList As List(Of Bill)
+
+    'Constructor of Table Class
+    Sub New(name As String, location As String, bill As Bill)
+        TableName = name
+        TableLocation = location
+        BillList.Add(bill)
+    End Sub
+
+    Sub setName(name As String)
+        TableName = name
+    End Sub
+
+    Sub setLocation(location As String)
+        TableLocation = location
+    End Sub
+
+    Function getName() As String
+        Return TableName
+    End Function
+
+    Function getLocation() As String
+        Return TableLocation
+    End Function
+
+    Function getBills() As List(Of Object)
+        Return
+    End Function
+
+End Class

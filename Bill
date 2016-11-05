@@ -1,0 +1,70 @@
+Imports Microsoft.VisualBasic
+
+Public Class Bill
+
+    ' Variables
+    Private BillName As String
+    Private TotalPrice As Double
+    Private TableID As String
+    Private ItemList As List(Of List(Of Object))
+
+    'Constructor of Bill Class
+    Sub New(name As String, table As String)
+        BillName = name
+        TotalPrice = 0.00
+        TableID = table
+    End Sub
+
+    'Sets BillName
+    Sub setName(name As String)
+        BillName = name
+    End Sub
+
+    'Sets TotalPrice
+    Sub setTotal(price As Double)
+        TotalPrice = price
+    End Sub
+
+    'Sets TableID
+    Sub setTableID(table As Table)
+        TableID = table.getName()
+    End Sub
+
+    'Takes an Item and the quantity. Searches for that item in the list and adds given quantity to current quantity of item.
+    Sub addItem(newItem As Item, quantity As Integer) 'Work In Progress: This code does not work and will soon be revamped
+        For Each listItem As Object In ItemList
+            If listItem.getName = newItem.getName Then
+                listItem[1]+= quantity
+            Else
+                ItemList.Add(newItem)
+            End If
+        Next
+
+    End Sub
+
+    'See addItem but removes
+    Sub removeItem(item As Item, quantity As Integer) 'Work In Progress: This code does not work and will soon be revamped
+        ItemList.Remove(item)
+    End Sub
+
+    'Returns BillName
+    Function getName() As String
+        Return BillName
+    End Function
+
+    'Returns TotalPrice
+    Function getTotal() As Double
+        Return TotalPrice
+    End Function
+
+    'Returns TableID
+    Function getTable() As Table
+        Return TableID
+    End Function
+
+    'Will return a string with the item list.
+    Function getList() As Item 'Work In Progress: This code does not work and will soon be revamped
+        Return
+    End Function
+
+End Class
